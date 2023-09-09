@@ -1,0 +1,25 @@
+﻿<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 visually-hidden text-center" id="uploadedImage">
+        <img src="#" alt="imagenotUpload" class="text-center border border-dark-subtle" style="width:24rem" id="image1" />
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 ">
+        <div class="mb-3">
+            <input type="file" id="input_img" class="form-control w-100" onchange="fileChange()" accept="image/*"> @*if you want uploading to other file type, change that want the file type or delete attribute to accept="image/*"*@
+        </div>
+        <div class="file-upload">
+            <div class="image-upload-wrap">
+            </div>
+        </div>
+    </div>
+</div>
+@* success alert. if you dont want success, you can delete this div*@
+<div class="row gx-0 mt-3">
+    <div class="col-sm-8 offset-2">
+        <div class="alert alert-success visually-hidden" id="imageLink">
+        </div>
+    </div>
+</div>
