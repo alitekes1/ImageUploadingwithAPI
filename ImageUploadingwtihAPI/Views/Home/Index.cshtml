@@ -5,15 +5,40 @@
 <script src="~/Scripts/jquery-3.7.1.min.js"></script>
 
 <div class="container-fluid my-3 ">
+    @* Header.if you dont want use success, you can delete this div*@
     <div class="row">
-        @* Header *@
         <div class="col-sm-12">
             <h2 class="text-center font-monospace text-dark">
                 Image Uploading with API to <a href="https://tr.imgbb.com/" target="_blank">tr.imgBB.com</a> in ASP.NET
             </h2>
         </div>
     </div>
-    @Html.Action("ImageUploading"); @*Image Uploading*@
+    @* After that upload to image, the image will show here.*@
+    <div class="row">
+        <div class="col-sm-8 offset-2 visually-hidden text-center" id="uploadedImage">
+            <img src="#" alt="imagenotUpload" class="text-center border border-dark-subtle" style="width:24rem" id="image1" />
+        </div>
+    </div>
+    @* Image choose input *@
+    <div class="row mt-3">
+        <div class="col-sm-8 offset-2">
+            <div class="mb-3">
+                <input type="file" id="input_img" class="form-control w-100" onchange="fileChange()" accept="image/*">
+                @*if you want uploading to other file type, change that want the file type or delete attribute to accept="image/*"*@
+            </div>
+            <div class="file-upload">
+                <div class="image-upload-wrap">
+                </div>
+            </div>
+        </div>
+    </div>
+    @* success alert. if you dont want use success, you can delete this div*@
+    <div class="row gx-0 mt-3">
+        <div class="col-sm-8 offset-2">
+            <div class="alert alert-success visually-hidden" id="imageLink">
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -21,12 +46,13 @@
     var uploadedImage = $("#uploadedImage");
     let image1 = document.getElementById("image1");
     let link;
+
     function fileChange() {
         var file = document.getElementById('input_img');
         var form = new FormData();
         form.append("image", file.files[0])
 
-        var imgBBKey = "723e033469614c94a5507eeb3ce49788";
+        var imgBBKey = "YOUR_API_KEY";
         // 1-You have to register to https://tr.imgbb.com/
         // 2-Entire https://api.imgbb.com/  and copy the API key.
         // 3-Paste to imggBbKey;
@@ -40,7 +66,6 @@
             "contentType": false,
             "data": form
         };
-
 
         $.ajax(settings).done(function (response) {
             console.log(response);

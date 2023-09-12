@@ -8,9 +8,5 @@ namespace ImageUploadingwtihAPI.Controllers
         {
             return View();
         }
-        public PartialViewResult ImageUploading()
-        {
-            return PartialView("_ImageUploading");
-        }
     }
 }
