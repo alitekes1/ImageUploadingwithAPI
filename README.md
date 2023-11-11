@@ -1,6 +1,6 @@
 # ImageUploadingwtihAPI_.NET-MVC
 |TR
-Bu Asp.NET MVC projesinde görselleri IMGBB'ye (resim barındırma hizmeti) kolayca ve ücretsiz olarak yükleyebilirsiniz. Öncelikle https://imgbb.com adresinden kayıt olmanız gerekmektedir. Bundan sonra https://api.imgbb.com/ adresinden API anahtarı almanız gerekmektedir. Son olarak API KEY'inizi kopyalayıp Index.cshtml sayfasına yapıştırmalısınız. Şimdi resim yükleyebilirsiniz. Ayrıca yüklediğiniz resimleri bu linketen görebilirsiniz.
+Bu Asp.NET MVC projesinde görselleri IMGBB'ye (resim barındırma hizmeti) kolayca ve ücretsiz olarak yükleyebilirsiniz. Öncelikle https://imgbb.com adresinden kayıt olmanız gerekmektedir. Bundan sonra https://api.imgbb.com/ adresinden API anahtarı almanız gerekmektedir. Son olarak API KEY'inizi kopyalayıp Index.cshtml sayfasına yapıştırmalısınız. Şimdi resim yükleyebilirsiniz. Ayrıca yüklediğiniz resimlere oluşan link ile ulaşabilirsiniz.
 
 |EN
 In this Asp.NET MVC project,you can upload images easily and for free to the IMGBB (image hosting). First of all, you have to register at https://imgbb.com. After that, you must get an API key from https://api.imgbb.com/. Finally, you must copy and paste your API KEY into the Index.cshtml page.You can uploading image at now.
